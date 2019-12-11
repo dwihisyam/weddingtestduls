@@ -22,7 +22,7 @@ p {line-height: 2}
 <!-- Header / Home-->
 <header class="w3-display-container w3-wide bgimg w3-grayscale-min" id="home">
   <div class="w3-display-middle w3-text-white w3-center">
-    <h1 class="w3-jumbo">Jane & John</h1>
+    <h1 class="w3-jumbo">Ical & yang digerebek</h1>
     <h2>Are getting married</h2>
     <h2><b>17.07.2017</b></h2>
   </div>
