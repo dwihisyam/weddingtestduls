@@ -153,7 +153,7 @@
       <h1 class="w3-text-grey mb-5"><b>Gallery</b></h1>
       <div class="multiple-items my-5" style="height:400px">
         <div>
-          <img class="mx-auto" src="img/image-01.jpg" alt="">
+          <img class="mx-auto" src="img/Image-01.jpg" alt="">
         </div>
         <div>
           <img class="mx-auto" src="img/image-02.jpg" alt="">
