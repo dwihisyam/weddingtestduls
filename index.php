@@ -156,19 +156,19 @@
           <img class="mx-auto" src="img/Image-01.jpg" alt="">
         </div>
         <div>
-          <img class="mx-auto" src="img/image-02.jpg" alt="">
+          <img class="mx-auto" src="img/Image-02.jpg" alt="">
         </div>
         <div>
-          <img class="mx-auto" src="img/image-03.jpg" alt="">
+          <img class="mx-auto" src="img/Image-03.jpg" alt="">
         </div>
         <div>
-          <img class="mx-auto" src="img/image-04.jpg" alt="">
+          <img class="mx-auto" src="img/Image-04.jpg" alt="">
         </div>
         <div>
-          <img class="mx-auto" src="img/image-05.jpg" alt="">
+          <img class="mx-auto" src="img/Image-05.jpg" alt="">
         </div>
         <div>
-          <img class="mx-auto" src="img/image-06.jpg" alt="">
+          <img class="mx-auto" src="img/Image-06.jpg" alt="">
         </div>
       </div>
     </div>
