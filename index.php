@@ -3,6 +3,7 @@
 <title>Wedding Invitation</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="img/logo.png">
 <link rel="stylesheet" href="css/w3.css">
 <link rel="stylesheet" href="css/fonts-googleapis.css">
 <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -20,15 +21,17 @@
   </div>
 
   <!-- Header / Home-->
-  <header class="w3-display-container w3-wide bgimg w3-grayscale-min" id="home">
-    <div class="w3-display-middle w3-center">
+  <header class="w3-display-container w3-wide bgimg" id="home">
+    <div style="position:absolute;background-color: rgba(0,0,0,0.5);width: 100%;height: 100%;">
+    </div>
+    <div class="w3-display-middle w3-center text-white">
       <h4>The Wedding Of</h4>
       <h1>Foger & Tyas</h1>
     </div>
   </header>
 
   <!-- About / Jane And John -->
-  <div class="w3-container w3-padding-64 w3-pale-red w3-grayscale-min w3-center" id="us">
+  <div class="w3-container w3-padding-64 w3-pale-red w3-grayscale-min w3-center page" id="us">
     <div class="w3-content">
       <h1 class="mb-5"><b>About</b></h1>
       <div class="row">
@@ -65,7 +68,7 @@
   </div>
 
   <!-- Party -->
-  <div class="w3-container w3-pale-red w3-padding-64 w3-center" id="party">
+  <div class="w3-container w3-pale-red w3-padding-64 w3-center page" id="party">
     <div class="w3-content">
       <h1 class="mb-5"><b>Ceremony</b></h1>
       <div class="text-center bgimgtime mx-auto mb-5 p-3" style="box-shadow: 0px 0px 5px rgba(0,0,0,0.2);width:90%;">
@@ -103,9 +106,8 @@
               <h4>Marriage</h4>
               <p>&emsp;The processional begins with the grandparents, flows through the parents, groom, officiant, wedding party, flower girl, and ring bearer, and ends with the bride making her entrance.</p>
               <div class="mt-4">
-                Date: Sunday, 29 December 2019
-                Time: 08.00
-                Address: Bukit Golf Riverside
+                Sunday, 29 December 2019, 08.00<br>
+                Bukit Golf Riverside
               </div>
             </div>
           </div>
@@ -114,9 +116,8 @@
             <h4>Wedding Ceremony</h4>
             <p>&emsp;At the wedding party the officiant introduces the married couple for the first time. Then, the bride and groom lead the recessional back up the aisle as guests shower you with the rice!</p>
             <div class="mt-4">
-              Date: Sunday, 29 December 2019
-              Time: 11.00
-              Address: Bukit Golf Riverside
+              Sunday, 29 December 2019, 11.00<br>
+              Bukit Golf Riverside
             </div>
             <img class="img-fluid mt-3" src="img/progress-2.png" alt="">
           </div>
@@ -125,8 +126,31 @@
     </div>
   </div>
 
+  <!-- Quotes -->
+  <header class="w3-display-container w3-wide bgimg2" id="quotes">
+    <div style="position:absolute;background-color: rgba(0,0,0,0.5);width: 100%;height: 100%; top:0%;">
+    </div>
+    <div class="w3-center text-white w3-padding-64">
+      <div class="w3-content">
+        <div class="multiple-items2 mx-auto" style="width:80%">
+          <div>
+            <h1 class="mb-5"><b>Doa</b></h1>
+            <h2 class="mb-3" style="text-align:end">وَمِنْ آيَاتِهِ أَنْ خَلَقَ لَكُم مِّنْ أَنفُسِكُمْ أَزْوَاجاً لِّتَسْكُنُوا إِلَيْهَا وَجَعَلَ بَيْنَكُم مَّوَدَّةً وَرَحْمَةً إِنَّ فِي ذَلِكَ لَآيَاتٍ لِّقَوْمٍ يَتَفَكَّرُونَ</b></h2>
+            <p>“Dan di antara tanda-tanda kekuasaan-Nya ialah Dia menciptakan untukmu isteri-isteri dari jenismu sendiri, supaya kamu cenderung dan merasa tenteram kepadanya, dan dijadikan-Nya diantaramu rasa kasih dan sayang. Sesungguhnya pada yang demikian itu benar-benar terdapat tanda-tanda bagi kaum yang berfikir”</p>
+            (QS. Ar-Ruum 30 : 21)
+          </div>
+          <div>
+            <h1 class="mb-5"><b>Quotes</b></h1>
+            <h1 style="font-family:tes,sans-serif">Happy is the man who finds a true friend, and far happpier is he who finds that true friend in his wife</h1>
+            -Franz Schubert-
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
   <!-- Gallery -->
-  <div class="w3-container w3-padding-64 w3-pale-red w3-grayscale-min w3-center" id="gallery">
+  <div class="w3-container w3-padding-64 w3-pale-red w3-grayscale-min w3-center page" id="gallery">
     <div class="w3-content">
       <h1 class="mb-5"><b>Gallery</b></h1>
       <div class="multiple-items my-5" style="height:400px">
@@ -153,7 +177,7 @@
   </div>
 
   <!-- Location -->
-  <div class="w3-container w3-pale-red w3-padding-64 w3-center" id="location" style="height:700px">
+  <div class="w3-container w3-pale-red w3-padding-64 w3-center page" id="location">
     <div class="w3-content">
       <h1 class="mb-5"><b>Location</b></h1>
       <div class="map-responsive mx-auto mt-5" style="width:100%;height:100%;box-shadow: 0px 0px 5px rgba(0,0,0,0.3);">
@@ -163,18 +187,19 @@
   </div>
 
   <!-- Footer -->
-  <footer class="w3-center w3-black w3-padding-16">
+  <footer class="w3-center w3-padding-16 text-white" style="background-color:rgba(0,0,0,0.8)">
     <p>2019 &copy; Dwi Ahmad Hisyam</p>
   </footer>
 
   <div class="w3-hide-small" style="margin-top:32px">&nbsp;</div>
   <div class="w3-bottom w3-hide-small">
     <div class="w3-bar w3-white w3-center w3-padding w3-opacity-min w3-hover-opacity-off">
-      <a href="#home" style="width:20%" class="w3-bar-item w3-button">Home</a>
-      <a href="#us" style="width:20%" class="w3-bar-item w3-button">About</a>
-      <a href="#party" style="width:20%" class="w3-bar-item w3-button">Ceremony</a>
-      <a href="#gallery" style="width:20%" class="w3-bar-item w3-button">Gallery</a>
-      <a href="#location" style="width:20%" class="w3-bar-item w3-button w3-hover-black">Location</a>
+      <a href="#home" style="width:16.6%" class="w3-bar-item w3-button">Home</a>
+      <a href="#us" style="width:16.6%" class="w3-bar-item w3-button">About</a>
+      <a href="#party" style="width:16.6%" class="w3-bar-item w3-button">Ceremony</a>
+      <a href="#quotes" style="width:16.6%" class="w3-bar-item w3-button">Quotes</a>
+      <a href="#gallery" style="width:16.6%" class="w3-bar-item w3-button">Gallery</a>
+      <a href="#location" style="width:16.6%" class="w3-bar-item w3-button">Location</a>
     </div>
   </div>
 
@@ -229,6 +254,14 @@
           autoplaySpeed: 2000,
         });
       }
+
+      $('.multiple-items2').slick({
+        dots: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 2000,
+      });
 
       $('#btn-music').click(function() {
         var music = document.getElementById("music");

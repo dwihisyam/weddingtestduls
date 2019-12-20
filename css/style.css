@@ -18,6 +18,10 @@ body,
     line-height: 2
   }
 
+  .page{
+    min-height: 700px;
+  }
+
   #home h1{
     font-family: tes,sans-serif;
     font-weight: bolder;
@@ -33,11 +37,11 @@ body,
   }
 
   .bgimg {
-    background-image: url("../img/fogertyas2.JPG")
+    background-image: url("../img/fogertyas2.jpg")
   }
   
   .bgimg2 {
-    background-image: url("../img/border.png");
+    background-image: url("../img/fogertyas4.jpg");
   }
   
   .bgimgtime {
