@@ -1,3 +1,8 @@
+@font-face {
+  font-family: tes;
+  src: url(../font.woff2);
+}
+
 body,
   h1,
   h2 {
@@ -13,10 +18,15 @@ body,
     line-height: 2
   }
 
+  #home h1{
+    font-family: tes,sans-serif;
+    font-weight: bolder;
+    font-size: 100px;
+  }
+
   .bgimg,
   .bgimg2,
-  .bgimg3,
-  .bgimg4 {
+  .bgimgtime {
     min-height: 100%;
     background-position: center;
     background-size: cover;
@@ -27,13 +37,153 @@ body,
   }
   
   .bgimg2 {
-    background-image: url("../img/ring.png")
+    background-image: url("../img/border.png");
   }
   
-  .bgimg3 {
-    background-image: url("../img/border.png")
+  .bgimgtime {
+    background-image: url("../img/ring.png");
   }
   
-  .bgimg4 {
-    background-image: url("../img/border-location.png")
+  .male{
+    text-align:end;
+  }
+
+  .female{
+    text-align:left;
+  }
+
+  .male img,
+  .female img{
+      width:25px;
+  }
+  
+  .male h5,
+  .female h5{
+      margin-bottom: 0px;
+  }
+
+  .love{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 270px;
+    z-index:3
+  }
+
+  .love img{
+    width:70px;
+  }
+
+  .rundown{
+    box-shadow: 0px 0px 5px rgba(0,0,0,0.2);
+    background-color:rgba(255,255,255,0.3);
+    border-radius:10px;
+  }
+
+  .rundown h4{
+    font-weight:500;
+  }
+
+  .rundown p{
+    text-align:justify;
+  }
+  
+  
+  @media screen and (max-width:425px){
+    #home h1{
+      font-size: 50px;
+    }
+    
+    #home h4{
+      font-size: 20px;
+    }
+    
+    .male, 
+    .female{
+      text-align:center;
+    }
+      
+    .love{
+      top: 770px;
+    }
+
+    .love img{
+      width:90px;
+    }
+
+    .countdown{
+      display: block !important;
+    }
+
+    .rundown{
+      width: 90%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  
+  }
+  
+  @media screen and (max-width:375px){
+    #home h1{
+      font-size: 40px;
+    }
+    
+    #home h4{
+      font-size: 15px;
+    }
+    
+    .male, 
+    .female{
+      text-align:center;
+    }
+      
+    .love{
+      top: 755px;
+    }
+
+    .love img{
+      width:80px;
+    }
+
+    .countdown{
+      display: block !important;
+    }
+
+    .rundown{
+      width: 90%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  
+  }
+  
+  
+  @media screen and (max-width:320px){
+    #home h1{
+      font-size: 30px;
+    }
+    
+    #home h4{
+      font-size: 10px;
+    }
+    
+    .male, 
+    .female{
+      text-align:center;
+    }
+      
+    .love{
+      top: 720px;
+    }
+
+    .countdown{
+      display: block !important;
+    }
+
+    .rundown{
+      width: 90%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  
   }
