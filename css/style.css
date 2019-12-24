@@ -38,6 +38,10 @@ body,
     font-weight: bolder;
     font-size: 50px;
   }
+  
+  #home2 img{
+    width: 80%;
+  }
 
   .bgimg,
   .bgimg2,
@@ -114,6 +118,10 @@ body,
     .bgimg2{
       min-height: 50%;
     }
+
+    .bgimgtime2{
+      background-image: url("../img/bgtimer2-rotate.png");
+    }
     
     #home h1{
       font-size: 50px;
@@ -129,6 +137,10 @@ body,
     
     #home2 h1{
       font-size: 30px;
+    }
+
+    #home2 img{
+      width: 100%;
     }
     
     .male, 
@@ -162,12 +174,28 @@ body,
       min-height: 50%;
     }
 
+    .bgimgtime2{
+      background-image: url("../img/bgtimer2-rotate.png");
+    }
+
     #home h1{
       font-size: 40px;
     }
     
     #home h4{
       font-size: 15px;
+    }
+
+    #home2 h4{
+      font-size: 20px;
+    }
+    
+    #home2 h1{
+      font-size: 30px;
+    }
+
+    #home2 img{
+      width: 100%;
     }
     
     .male, 
@@ -202,6 +230,10 @@ body,
       min-height: 50%;
     }
 
+    .bgimgtime2{
+      background-image: url("../img/bgtimer2-rotate.png");
+    }
+
     #home h1{
       font-size: 30px;
     }
@@ -220,6 +252,10 @@ body,
 
     #home2 h4{
       font-size: 15px;
+    }
+
+    #home2 img{
+      width: 100%;
     }
     
     .male, 
