@@ -27,10 +27,22 @@ body,
     font-weight: bolder;
     font-size: 100px;
   }
+  
+  #home2 h4{
+    font-family: 'Dancing Script', cursive;
+    font-size: 30px;
+  }
+  
+  #home2 h1{
+    font-family: cursive;
+    font-weight: bolder;
+    font-size: 50px;
+  }
 
   .bgimg,
   .bgimg2,
-  .bgimgtime {
+  .bgimgtime,
+  .bgimgtime2 {
     min-height: 100%;
     background-position: center;
     background-size: cover;
@@ -45,7 +57,11 @@ body,
   }
   
   .bgimgtime {
-    background-image: url("../img/ring.png");
+    background-image: url("../img/bgtimer1.png");
+  }
+  
+  .bgimgtime2 {
+    background-image: url("../img/bgtimer2.png");
   }
   
   .male{
@@ -105,6 +121,14 @@ body,
     
     #home h4{
       font-size: 20px;
+    }
+
+    #home2 h4{
+      font-size: 20px;
+    }
+    
+    #home2 h1{
+      font-size: 30px;
     }
     
     .male, 
@@ -184,6 +208,18 @@ body,
     
     #home h4{
       font-size: 10px;
+    }
+
+    #home2 h1{
+      font-size: 20px;
+    }
+    
+    #home2 h3{
+      font-size: 15px;
+    }
+
+    #home2 h4{
+      font-size: 15px;
     }
     
     .male, 

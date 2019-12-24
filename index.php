@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<title>Wedding Invitation</title>
+<title>Marriage Vows</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="icon" href="img/logo.png">
@@ -10,6 +10,7 @@
 <link rel="stylesheet" href="css/style.css">
 <link href="slick-1.8.1/slick/slick.css" rel="stylesheet">
 <link href="slick-1.8.1/slick/slick-theme.css" rel="stylesheet">
+<link href="aos-master/dist/aos.css" rel="stylesheet">
 
 <script src="js/jquery.min.js"></script>
 
@@ -25,8 +26,11 @@
     <div style="position:absolute;background-color: rgba(0,0,0,0.5);width: 100%;height: 100%;">
     </div>
     <div class="w3-display-middle w3-center text-white">
-      <h4>The Wedding Of</h4>
-      <h1>Foger & Tyas</h1>
+      <div data-aos="fade-up">
+        <h4>The Wedding Of</h4>
+        <h1>Foger & Tyas</h1>
+        <h4>29.12.2019</h4>
+      </div>
     </div>
   </header>
 
@@ -35,22 +39,22 @@
     <div class="w3-content">
       <h1 class="mb-5"><b>About</b></h1>
       <div class="row">
-        <div class="col-md-3 p-4 male">
+        <div data-aos="fade-right" data-aos-easing="ease-in-sine" class="col-md-3 p-4 male">
           <img class="mb-3" src="img/icon-male.png" alt="">
           <h5>Foger Adi Abdullah</h5>
           <p class="mb-1">17.05.1993</p>
           <p>We did meet through a mutual friend at the end of our first year in college at Georgia. We got along really well and clicked instantly.</p>
         </div>
-        <div class="col-md-3">
+        <div data-aos="fade-right" data-aos-easing="ease-in-sine" class="col-md-3">
           <img class="img-fluid mb-3" src="img/story-2.jpg" alt="">
         </div>
         <div class="love">
           <img src="img/love.png" alt="">
         </div>
-        <div class="col-md-3">
+        <div data-aos="fade-left" data-aos-easing="ease-in-sine" class="col-md-3">
           <img class="img-fluid mb-3" src="img/story-1.jpg" alt="">
         </div>
-        <div class="col-md-3 p-4 female">
+        <div data-aos="fade-left" data-aos-easing="ease-in-sine" class="col-md-3 p-4 female">
           <img class="mb-3" src="img/icon-female.png" alt="">
           <h5>Tyas Wijantantri</h5>
           <p class="mb-1">17.05.1993</p>
@@ -71,7 +75,7 @@
   <div class="w3-container w3-pale-red w3-padding-64 w3-center page" id="party">
     <div class="w3-content">
       <h1 class="mb-5"><b>Ceremony</b></h1>
-      <div class="text-center bgimgtime mx-auto mb-5 p-3" style="box-shadow: 0px 0px 5px rgba(0,0,0,0.2);width:90%;">
+      <div data-aos="flip-up" class="text-center bgimgtime mx-auto mb-5 p-3" style="box-shadow: 0px 0px 5px rgba(0,0,0,0.2);width:90%;">
         <h3 style="font-weight:bold;">Until we getting married</h3>
         <div class="row my-4">
           <div class="row mx-auto countdown">
@@ -100,7 +104,7 @@
         <p>Our wedding day event order as follows with different cultures and religions will incorporate other elements or swap things around.</p>
         <div class="row">
           <div class="col-md-1"></div>
-          <div class="col-md-4 card p-4 mb-3 rundown">
+          <div data-aos="flip-left" class="col-md-4 card p-4 mb-3 rundown">
             <img class="img-fluid mb-3" src="img/progress-1.png" alt="">
             <div>
               <h4>Marriage</h4>
@@ -112,7 +116,7 @@
             </div>
           </div>
           <div class="col-md-2"></div>
-          <div class="col-md-4 card p-4 mb-3 rundown">
+          <div data-aos="flip-right" class="col-md-4 card p-4 mb-3 rundown">
             <h4>Wedding Ceremony</h4>
             <p>&emsp;At the wedding party the officiant introduces the married couple for the first time. Then, the bride and groom lead the recessional back up the aisle as guests shower you with the rice!</p>
             <div class="mt-4">
@@ -134,15 +138,19 @@
       <div class="w3-content">
         <div class="multiple-items2 mx-auto" style="width:80%">
           <div>
-            <h1 class="mb-5"><b>Doa</b></h1>
-            <h2 class="mb-3" style="text-align:end">وَمِنْ آيَاتِهِ أَنْ خَلَقَ لَكُم مِّنْ أَنفُسِكُمْ أَزْوَاجاً لِّتَسْكُنُوا إِلَيْهَا وَجَعَلَ بَيْنَكُم مَّوَدَّةً وَرَحْمَةً إِنَّ فِي ذَلِكَ لَآيَاتٍ لِّقَوْمٍ يَتَفَكَّرُونَ</b></h2>
-            <p>“Dan di antara tanda-tanda kekuasaan-Nya ialah Dia menciptakan untukmu isteri-isteri dari jenismu sendiri, supaya kamu cenderung dan merasa tenteram kepadanya, dan dijadikan-Nya diantaramu rasa kasih dan sayang. Sesungguhnya pada yang demikian itu benar-benar terdapat tanda-tanda bagi kaum yang berfikir”</p>
-            (QS. Ar-Ruum 30 : 21)
+            <h1 class="mb-5"><b>Quotes</b></h1>
+            <h1 class="mb-4" style="font-family:tes,sans-serif">Happy is the man who finds a true friend, and far happpier is he who finds that true friend in his wife</h1>
+            -Franz Schubert-
           </div>
           <div>
             <h1 class="mb-5"><b>Quotes</b></h1>
-            <h1 style="font-family:tes,sans-serif">Happy is the man who finds a true friend, and far happpier is he who finds that true friend in his wife</h1>
-            -Franz Schubert-
+            <h1 class="mb-4" style="font-family:tes,sans-serif">Marriage is like a golden ring in a chain, whose beginning is a glance and whose ending is eternity.</h1>
+            -Khalil Gibran-
+          </div>
+          <div>
+            <h1 class="mb-5"><b>Quotes</b></h1>
+            <h1 class="mb-4" style="font-family:tes,sans-serif">A happy marriage is a long conversation which always seems too short.</h1>
+            -Andre Maurois-
           </div>
         </div>
       </div>
@@ -153,7 +161,7 @@
   <div class="w3-container w3-padding-64 w3-pale-red w3-grayscale-min w3-center page" id="gallery">
     <div class="w3-content">
       <h1 class="mb-5"><b>Gallery</b></h1>
-      <div class="multiple-items my-5" style="height:400px">
+      <div data-aos="zoom-in" class="multiple-items my-5" style="height:400px">
         <div>
           <img class="mx-auto" src="img/Image-01.jpg" alt="">
         </div>
@@ -188,7 +196,7 @@
 
   <!-- Footer -->
   <footer class="w3-center w3-padding-16 text-white" style="background-color:rgba(0,0,0,0.8)">
-    <p>2019 &copy; Dwi Ahmad Hisyam</p>
+    <p>2019 &copy; Marriage Vows</p>
   </footer>
 
   <div class="w3-hide-small" style="margin-top:32px">&nbsp;</div>
@@ -205,9 +213,12 @@
 
   <script src="slick-1.8.1/slick/slick.min.js"></script>
   <script src="js/kit-fontawesome.js"></script>
+  <script src="aos-master/dist/aos.js"></script>
 
   <script>
     (function() {
+      AOS.init();
+
       var countDownDate = new Date("Dec 30, 2019 00:00:00").getTime();
       var x = setInterval(function() {
         var now = new Date().getTime();
@@ -260,7 +271,7 @@
         slidesToShow: 1,
         slidesToScroll: 1,
         autoplay: true,
-        autoplaySpeed: 2000,
+        autoplaySpeed: 10000,
       });
 
       $('#btn-music').click(function() {
