@@ -1,292 +1,315 @@
-<!DOCTYPE html>
-<html>
-<title>Marriage Vows</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="icon" href="img/logo.png">
-<link rel="stylesheet" href="css/w3.css">
-<link rel="stylesheet" href="css/fonts-googleapis.css">
-<link rel="stylesheet" href="css/bootstrap.min.css">
-<link rel="stylesheet" href="css/style.css">
-<link href="slick-1.8.1/slick/slick.css" rel="stylesheet">
-<link href="slick-1.8.1/slick/slick-theme.css" rel="stylesheet">
-<link href="aos-master/dist/aos.css" rel="stylesheet">
+<?php
+/**
+ * CodeIgniter
+ *
+ * An open source application development framework for PHP
+ *
+ * This content is released under the MIT License (MIT)
+ *
+ * Copyright (c) 2014 - 2019, British Columbia Institute of Technology
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ *
+ * @package	CodeIgniter
+ * @author	EllisLab Dev Team
+ * @copyright	Copyright (c) 2008 - 2014, EllisLab, Inc. (https://ellislab.com/)
+ * @copyright	Copyright (c) 2014 - 2019, British Columbia Institute of Technology (https://bcit.ca/)
+ * @license	https://opensource.org/licenses/MIT	MIT License
+ * @link	https://codeigniter.com
+ * @since	Version 1.0.0
+ * @filesource
+ */
 
-<script src="js/jquery.min.js"></script>
+/*
+ *---------------------------------------------------------------
+ * APPLICATION ENVIRONMENT
+ *---------------------------------------------------------------
+ *
+ * You can load different configurations depending on your
+ * current environment. Setting the environment also influences
+ * things like logging and error reporting.
+ *
+ * This can be set to anything, but default usage is:
+ *
+ *     development
+ *     testing
+ *     production
+ *
+ * NOTE: If you change these, also change the error_reporting() code below
+ */
+	define('ENVIRONMENT', isset($_SERVER['CI_ENV']) ? $_SERVER['CI_ENV'] : 'development');
 
-<body>
-  <audio id="music" src="musik.mp3" loop autoplay muted></audio>
-  <!-- Navbar (sticky bottom) -->
-  <div style="top:20px;right:20px;z-index:2;position:fixed;">
-    <button style="background:none; border-style:none;"><i id="btn-music" class="fas fa-volume-mute fa-3x"></i></button>
-  </div>
+/*
+ *---------------------------------------------------------------
+ * ERROR REPORTING
+ *---------------------------------------------------------------
+ *
+ * Different environments will require different levels of error reporting.
+ * By default development will show errors but testing and live will hide them.
+ */
+switch (ENVIRONMENT)
+{
+	case 'development':
+		error_reporting(-1);
+		ini_set('display_errors', 1);
+	break;
 
-  <!-- Header / Home-->
-  <header class="w3-display-container w3-wide bgimg" id="home">
-    <div style="position:absolute;background-color: rgba(0,0,0,0.5);width: 100%;height: 100%;">
-    </div>
-    <div class="w3-display-middle w3-center text-white">
-      <div data-aos="fade-up">
-        <h4>The Wedding Of</h4>
-        <h1>Foger & Tyas</h1>
-        <h4>29.12.2019</h4>
-      </div>
-    </div>
-  </header>
+	case 'testing':
+	case 'production':
+		ini_set('display_errors', 0);
+		if (version_compare(PHP_VERSION, '5.3', '>='))
+		{
+			error_reporting(E_ALL & ~E_NOTICE & ~E_DEPRECATED & ~E_STRICT & ~E_USER_NOTICE & ~E_USER_DEPRECATED);
+		}
+		else
+		{
+			error_reporting(E_ALL & ~E_NOTICE & ~E_STRICT & ~E_USER_NOTICE);
+		}
+	break;
 
-  <!-- About / Jane And John -->
-  <div class="w3-container w3-padding-64 w3-pale-red w3-grayscale-min w3-center page" id="us">
-    <div class="w3-content">
-      <h1 class="mb-5"><b>About</b></h1>
-      <div class="row">
-        <div data-aos="fade-right" data-aos-easing="ease-in-sine" class="col-md-3 p-4 male">
-          <img class="mb-3" src="img/icon-male.png" alt="">
-          <h5>Foger Adi Abdullah</h5>
-          <p class="mb-1">17.05.1993</p>
-          <p>We did meet through a mutual friend at the end of our first year in college at Georgia. We got along really well and clicked instantly.</p>
-        </div>
-        <div data-aos="fade-right" data-aos-easing="ease-in-sine" class="col-md-3">
-          <img class="img-fluid mb-3" src="img/story-2.jpg" alt="">
-        </div>
-        <div class="love">
-          <img src="img/love.png" alt="">
-        </div>
-        <div data-aos="fade-left" data-aos-easing="ease-in-sine" class="col-md-3">
-          <img class="img-fluid mb-3" src="img/story-1.jpg" alt="">
-        </div>
-        <div data-aos="fade-left" data-aos-easing="ease-in-sine" class="col-md-3 p-4 female">
-          <img class="mb-3" src="img/icon-female.png" alt="">
-          <h5>Tyas Wijantantri</h5>
-          <p class="mb-1">17.05.1993</p>
-          <p>We met through a mutual friend at the end of our freshman year in college at Georgia. I noticed her eyes, and how outgoing she was.</p>
-        </div>
-      </div>
-      <div class="mx-auto">
-        <div class="my-3">
-          <h3>On the 29th of December, 2019</h3>
-          <p>Bukit Golf Riverside</p>
-        </div>
-      </div>
-    </div>
-  </div>
-  </div>
+	default:
+		header('HTTP/1.1 503 Service Unavailable.', TRUE, 503);
+		echo 'The application environment is not set correctly.';
+		exit(1); // EXIT_ERROR
+}
 
-  <!-- Party -->
-  <div class="w3-container w3-pale-red w3-padding-64 w3-center page" id="party">
-    <div class="w3-content">
-      <h1 class="mb-5"><b>Ceremony</b></h1>
-      <div data-aos="flip-up" class="text-center bgimgtime mx-auto mb-5 p-3" style="box-shadow: 0px 0px 5px rgba(0,0,0,0.2);width:90%;">
-        <h3 style="font-weight:bold;">Until we getting married</h3>
-        <div class="row my-4">
-          <div class="row mx-auto countdown">
-            <div class="mx-5">
-              <h1 style="font-size:50px;font-family:serif;font-style:italic;" id="hari"></h1>
-              <div style="font-weight:bold">Days</div>
-            </div>
-            <div class="mx-5">
-              <h1 style="font-size:50px;font-family:serif;font-style:italic;" id="jam"></h1>
-              <div style="font-weight:bold">Hours</div>
-            </div>
-            <div class="mx-5">
-              <h1 style="font-size:50px;font-family:serif;font-style:italic;" id="menit"></h1>
-              <div style="font-weight:bold">Minutes</div>
-            </div>
-            <div class="mx-5">
-              <h1 style="font-size:50px;font-family:serif;font-style:italic;" id="detik"></h1>
-              <div style="font-weight:bold">Seconds</div>
-            </div>
-          </div>
-        </div>
-        <h4 style="font-weight:bold;">are remaining</h4>
-      </div>
-      <div>
-        <h3 class="mb-3" style="font-weight:bold;">Arrengement in progress</h3>
-        <p>Our wedding day event order as follows with different cultures and religions will incorporate other elements or swap things around.</p>
-        <div class="row">
-          <div class="col-md-1"></div>
-          <div data-aos="flip-left" class="col-md-4 card p-4 mb-3 rundown">
-            <img class="img-fluid mb-3" src="img/progress-1.png" alt="">
-            <div>
-              <h4>Marriage</h4>
-              <p>&emsp;The processional begins with the grandparents, flows through the parents, groom, officiant, wedding party, flower girl, and ring bearer, and ends with the bride making her entrance.</p>
-              <div class="mt-4">
-                Sunday, 29 December 2019, 08.00<br>
-                Bukit Golf Riverside
-              </div>
-            </div>
-          </div>
-          <div class="col-md-2"></div>
-          <div data-aos="flip-right" class="col-md-4 card p-4 mb-3 rundown">
-            <h4>Wedding Ceremony</h4>
-            <p>&emsp;At the wedding party the officiant introduces the married couple for the first time. Then, the bride and groom lead the recessional back up the aisle as guests shower you with the rice!</p>
-            <div class="mt-4">
-              Sunday, 29 December 2019, 11.00<br>
-              Bukit Golf Riverside
-            </div>
-            <img class="img-fluid mt-3" src="img/progress-2.png" alt="">
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+/*
+ *---------------------------------------------------------------
+ * SYSTEM DIRECTORY NAME
+ *---------------------------------------------------------------
+ *
+ * This variable must contain the name of your "system" directory.
+ * Set the path if it is not in the same directory as this file.
+ */
+	$system_path = 'system';
 
-  <!-- Quotes -->
-  <header class="w3-display-container w3-wide bgimg2" id="quotes">
-    <div style="position:absolute;background-color: rgba(0,0,0,0.5);width: 100%;height: 100%; top:0%;">
-    </div>
-    <div class="w3-center text-white w3-padding-64">
-      <div class="w3-content">
-        <div class="multiple-items2 mx-auto" style="width:80%">
-          <div>
-            <h1 class="mb-5"><b>Quotes</b></h1>
-            <h1 class="mb-4" style="font-family:tes,sans-serif">Happy is the man who finds a true friend, and far happpier is he who finds that true friend in his wife</h1>
-            -Franz Schubert-
-          </div>
-          <div>
-            <h1 class="mb-5"><b>Quotes</b></h1>
-            <h1 class="mb-4" style="font-family:tes,sans-serif">Marriage is like a golden ring in a chain, whose beginning is a glance and whose ending is eternity.</h1>
-            -Khalil Gibran-
-          </div>
-          <div>
-            <h1 class="mb-5"><b>Quotes</b></h1>
-            <h1 class="mb-4" style="font-family:tes,sans-serif">A happy marriage is a long conversation which always seems too short.</h1>
-            -Andre Maurois-
-          </div>
-        </div>
-      </div>
-    </div>
-  </header>
+/*
+ *---------------------------------------------------------------
+ * APPLICATION DIRECTORY NAME
+ *---------------------------------------------------------------
+ *
+ * If you want this front controller to use a different "application"
+ * directory than the default one you can set its name here. The directory
+ * can also be renamed or relocated anywhere on your server. If you do,
+ * use an absolute (full) server path.
+ * For more info please see the user guide:
+ *
+ * https://codeigniter.com/user_guide/general/managing_apps.html
+ *
+ * NO TRAILING SLASH!
+ */
+	$application_folder = 'application';
 
-  <!-- Gallery -->
-  <div class="w3-container w3-padding-64 w3-pale-red w3-grayscale-min w3-center page" id="gallery">
-    <div class="w3-content">
-      <h1 class="mb-5"><b>Gallery</b></h1>
-      <div data-aos="zoom-in" class="multiple-items my-5" style="height:400px">
-        <div>
-          <img class="mx-auto" src="img/Image-01.jpg" alt="">
-        </div>
-        <div>
-          <img class="mx-auto" src="img/Image-02.jpg" alt="">
-        </div>
-        <div>
-          <img class="mx-auto" src="img/Image-03.jpg" alt="">
-        </div>
-        <div>
-          <img class="mx-auto" src="img/Image-04.jpg" alt="">
-        </div>
-        <div>
-          <img class="mx-auto" src="img/Image-05.jpg" alt="">
-        </div>
-        <div>
-          <img class="mx-auto" src="img/Image-06.jpg" alt="">
-        </div>
-      </div>
-    </div>
-  </div>
+/*
+ *---------------------------------------------------------------
+ * VIEW DIRECTORY NAME
+ *---------------------------------------------------------------
+ *
+ * If you want to move the view directory out of the application
+ * directory, set the path to it here. The directory can be renamed
+ * and relocated anywhere on your server. If blank, it will default
+ * to the standard location inside your application directory.
+ * If you do move this, use an absolute (full) server path.
+ *
+ * NO TRAILING SLASH!
+ */
+	$view_folder = '';
 
-  <!-- Location -->
-  <div class="w3-container w3-pale-red w3-padding-64 w3-center page" id="location">
-    <div class="w3-content">
-      <h1 class="mb-5"><b>Location</b></h1>
-      <div class="map-responsive mx-auto mt-5" style="width:100%;height:100%;box-shadow: 0px 0px 5px rgba(0,0,0,0.3);">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3964.7862268316658!2d106.90303191662264!3d-6.421507312277507!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69eb2fc8c6d171%3A0x47a39e54424d6eda!2sBukit%20Golf%20Riverside!5e0!3m2!1sid!2sid!4v1576813034180!5m2!1sid!2sid" width="100%" height="400px" frameborder="0" style="border:0;box-shadow: 0px 0px 5px rgba(0,0,0,0.5);" allowfullscreen></iframe>
-      </div>
-    </div>
-  </div>
 
-  <!-- Footer -->
-  <footer class="w3-center w3-padding-16 text-white" style="background-color:rgba(0,0,0,0.8)">
-    <p>2019 &copy; Marriage Vows</p>
-  </footer>
+/*
+ * --------------------------------------------------------------------
+ * DEFAULT CONTROLLER
+ * --------------------------------------------------------------------
+ *
+ * Normally you will set your default controller in the routes.php file.
+ * You can, however, force a custom routing by hard-coding a
+ * specific controller class/function here. For most applications, you
+ * WILL NOT set your routing here, but it's an option for those
+ * special instances where you might want to override the standard
+ * routing in a specific front controller that shares a common CI installation.
+ *
+ * IMPORTANT: If you set the routing here, NO OTHER controller will be
+ * callable. In essence, this preference limits your application to ONE
+ * specific controller. Leave the function name blank if you need
+ * to call functions dynamically via the URI.
+ *
+ * Un-comment the $routing array below to use this feature
+ */
+	// The directory name, relative to the "controllers" directory.  Leave blank
+	// if your controller is not in a sub-directory within the "controllers" one
+	// $routing['directory'] = '';
 
-  <div class="w3-hide-small" style="margin-top:32px">&nbsp;</div>
-  <div class="w3-bottom w3-hide-small">
-    <div class="w3-bar w3-white w3-center w3-padding w3-opacity-min w3-hover-opacity-off">
-      <a href="#home" style="width:16.6%" class="w3-bar-item w3-button">Home</a>
-      <a href="#us" style="width:16.6%" class="w3-bar-item w3-button">About</a>
-      <a href="#party" style="width:16.6%" class="w3-bar-item w3-button">Ceremony</a>
-      <a href="#quotes" style="width:16.6%" class="w3-bar-item w3-button">Quotes</a>
-      <a href="#gallery" style="width:16.6%" class="w3-bar-item w3-button">Gallery</a>
-      <a href="#location" style="width:16.6%" class="w3-bar-item w3-button">Location</a>
-    </div>
-  </div>
+	// The controller class file name.  Example:  mycontroller
+	// $routing['controller'] = '';
 
-  <script src="slick-1.8.1/slick/slick.min.js"></script>
-  <script src="js/kit-fontawesome.js"></script>
-  <script src="aos-master/dist/aos.js"></script>
+	// The controller function you wish to be called.
+	// $routing['function']	= '';
 
-  <script>
-    (function() {
-      AOS.init();
 
-      var countDownDate = new Date("Dec 30, 2019 00:00:00").getTime();
-      var x = setInterval(function() {
-        var now = new Date().getTime();
-        var distance = countDownDate - now;
-        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-        document.getElementById("hari").innerHTML = days;
-        document.getElementById("jam").innerHTML = hours;
-        document.getElementById("menit").innerHTML = minutes;
-        document.getElementById("detik").innerHTML = seconds;
-        if (distance < 0) {
-          clearInterval(x);
-          document.getElementById("hari").innerHTML = "00";
-          document.getElementById("jam").innerHTML = "00";
-          document.getElementById("menit").innerHTML = "00";
-          document.getElementById("detik").innerHTML = "00";
-        }
-      }, 1000);
+/*
+ * -------------------------------------------------------------------
+ *  CUSTOM CONFIG VALUES
+ * -------------------------------------------------------------------
+ *
+ * The $assign_to_config array below will be passed dynamically to the
+ * config class when initialized. This allows you to set custom config
+ * items or override any default config values found in the config.php file.
+ * This can be handy as it permits you to share one application between
+ * multiple front controller files, with each file containing different
+ * config values.
+ *
+ * Un-comment the $assign_to_config array below to use this feature
+ */
+	// $assign_to_config['name_of_config_item'] = 'value of config item';
 
-      if (window.innerWidth < 1024 && window.innerWidth >= 768) {
-        $('.multiple-items').slick({
-          dots: true,
-          slidesToShow: 2,
-          slidesToScroll: 1,
-          autoplay: true,
-          autoplaySpeed: 2000,
-        });
-      } else if (window.innerWidth < 768) {
-        $('.multiple-items').slick({
-          dots: true,
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          autoplay: true,
-          autoplaySpeed: 2000,
-        });
-      } else {
-        $('.multiple-items').slick({
-          dots: true,
-          slidesToShow: 3,
-          slidesToScroll: 1,
-          autoplay: true,
-          autoplaySpeed: 2000,
-        });
-      }
 
-      $('.multiple-items2').slick({
-        dots: true,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        autoplay: true,
-        autoplaySpeed: 10000,
-      });
 
-      $('#btn-music').click(function() {
-        var music = document.getElementById("music");
-        if (music.muted == true) {
-          music.muted = false;
-          $(this).removeClass('fa-volume-mute').addClass('fa-volume-up');
-        } else {
-          music.muted = true;
-          $(this).removeClass('fa-volume-up').addClass('fa-volume-mute');
-        }
-      });
-    }())
-  </script>
+// --------------------------------------------------------------------
+// END OF USER CONFIGURABLE SETTINGS.  DO NOT EDIT BELOW THIS LINE
+// --------------------------------------------------------------------
 
-</body>
+/*
+ * ---------------------------------------------------------------
+ *  Resolve the system path for increased reliability
+ * ---------------------------------------------------------------
+ */
 
-</html>
+	// Set the current directory correctly for CLI requests
+	if (defined('STDIN'))
+	{
+		chdir(dirname(__FILE__));
+	}
+
+	if (($_temp = realpath($system_path)) !== FALSE)
+	{
+		$system_path = $_temp.DIRECTORY_SEPARATOR;
+	}
+	else
+	{
+		// Ensure there's a trailing slash
+		$system_path = strtr(
+			rtrim($system_path, '/\\'),
+			'/\\',
+			DIRECTORY_SEPARATOR.DIRECTORY_SEPARATOR
+		).DIRECTORY_SEPARATOR;
+	}
+
+	// Is the system path correct?
+	if ( ! is_dir($system_path))
+	{
+		header('HTTP/1.1 503 Service Unavailable.', TRUE, 503);
+		echo 'Your system folder path does not appear to be set correctly. Please open the following file and correct this: '.pathinfo(__FILE__, PATHINFO_BASENAME);
+		exit(3); // EXIT_CONFIG
+	}
+
+/*
+ * -------------------------------------------------------------------
+ *  Now that we know the path, set the main path constants
+ * -------------------------------------------------------------------
+ */
+	// The name of THIS file
+	define('SELF', pathinfo(__FILE__, PATHINFO_BASENAME));
+
+	// Path to the system directory
+	define('BASEPATH', $system_path);
+
+	// Path to the front controller (this file) directory
+	define('FCPATH', dirname(__FILE__).DIRECTORY_SEPARATOR);
+
+	// Name of the "system" directory
+	define('SYSDIR', basename(BASEPATH));
+
+	// The path to the "application" directory
+	if (is_dir($application_folder))
+	{
+		if (($_temp = realpath($application_folder)) !== FALSE)
+		{
+			$application_folder = $_temp;
+		}
+		else
+		{
+			$application_folder = strtr(
+				rtrim($application_folder, '/\\'),
+				'/\\',
+				DIRECTORY_SEPARATOR.DIRECTORY_SEPARATOR
+			);
+		}
+	}
+	elseif (is_dir(BASEPATH.$application_folder.DIRECTORY_SEPARATOR))
+	{
+		$application_folder = BASEPATH.strtr(
+			trim($application_folder, '/\\'),
+			'/\\',
+			DIRECTORY_SEPARATOR.DIRECTORY_SEPARATOR
+		);
+	}
+	else
+	{
+		header('HTTP/1.1 503 Service Unavailable.', TRUE, 503);
+		echo 'Your application folder path does not appear to be set correctly. Please open the following file and correct this: '.SELF;
+		exit(3); // EXIT_CONFIG
+	}
+
+	define('APPPATH', $application_folder.DIRECTORY_SEPARATOR);
+
+	// The path to the "views" directory
+	if ( ! isset($view_folder[0]) && is_dir(APPPATH.'views'.DIRECTORY_SEPARATOR))
+	{
+		$view_folder = APPPATH.'views';
+	}
+	elseif (is_dir($view_folder))
+	{
+		if (($_temp = realpath($view_folder)) !== FALSE)
+		{
+			$view_folder = $_temp;
+		}
+		else
+		{
+			$view_folder = strtr(
+				rtrim($view_folder, '/\\'),
+				'/\\',
+				DIRECTORY_SEPARATOR.DIRECTORY_SEPARATOR
+			);
+		}
+	}
+	elseif (is_dir(APPPATH.$view_folder.DIRECTORY_SEPARATOR))
+	{
+		$view_folder = APPPATH.strtr(
+			trim($view_folder, '/\\'),
+			'/\\',
+			DIRECTORY_SEPARATOR.DIRECTORY_SEPARATOR
+		);
+	}
+	else
+	{
+		header('HTTP/1.1 503 Service Unavailable.', TRUE, 503);
+		echo 'Your view folder path does not appear to be set correctly. Please open the following file and correct this: '.SELF;
+		exit(3); // EXIT_CONFIG
+	}
+
+	define('VIEWPATH', $view_folder.DIRECTORY_SEPARATOR);
+
+/*
+ * --------------------------------------------------------------------
+ * LOAD THE BOOTSTRAP FILE
+ * --------------------------------------------------------------------
+ *
+ * And away we go...
+ */
+require_once BASEPATH.'core/CodeIgniter.php';
