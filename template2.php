@@ -46,7 +46,7 @@
         <div style="position:absolute;background-color: rgba(0,0,0,0.5);width: 100%;height: 100%;">
         </div>
         <div class="w3-display-middle w3-center" style="position:absolute;">
-            <img src="assets/img/background-home.png" alt="">
+            <img src="assets/img/template2/background-home.png" alt="">
         </div>
         <div class="w3-display-middle w3-center text-white">
             <div data-aos="fade-up">
