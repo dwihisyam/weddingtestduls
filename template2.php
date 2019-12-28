@@ -344,10 +344,10 @@
                 document.getElementById("sidebar").style.width = "0";
             });
             $("#btn-template1").click(function() {
-                location.replace("template1");
+                location.replace("template1.php");
             });
             $("#btn-template2").click(function() {
-                location.replace("template/template2");
+                location.replace("template2.php");
             });
         }())
     </script>
